@@ -229,6 +229,62 @@ footer .sig-detail {
   footer .sig { font-size: 20px; }
   footer .sig-detail { font-size: 12px; }
 }
+/* ===== INLINE IMAGES ===== */
+.inline-img {
+  margin: 36px 0;
+  overflow: hidden;
+}
+.inline-img img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(30%) contrast(1.05);
+}
+.inline-img figcaption {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+  margin-top: 10px;
+}
+/* Float variant — small image in the margin */
+.inline-img.float-right {
+  float: right;
+  width: 220px;
+  margin: 8px 0 20px 32px;
+}
+.inline-img.float-right img {
+  height: 160px;
+  width: 220px;
+}
+.inline-img.float-left {
+  float: left;
+  width: 220px;
+  margin: 8px 32px 20px 0;
+}
+.inline-img.float-left img {
+  height: 160px;
+  width: 220px;
+}
+/* Clearfix */
+.clearfix::after { content: ''; display: table; clear: both; }
+
+@media (max-width: 600px) {
+  .inline-img.float-right,
+  .inline-img.float-left {
+    float: none;
+    width: 100%;
+    margin: 24px 0;
+  }
+  .inline-img.float-right img,
+  .inline-img.float-left img {
+    width: 100%;
+    height: 180px;
+  }
+  .inline-img img { height: 200px; }
+}
+
 /* ===== ANIMATIONS ===== */
 .reveal {
   opacity: 0;
@@ -286,13 +342,29 @@ footer .sig-detail {
 
 <p class="punchline">La question n'est pas &laquo;&nbsp;faut-il faire de l'IA&nbsp;&raquo;. La question est&nbsp;: <strong>qui tient le stylo quand on dessine le p&eacute;rim&egrave;tre du possible&nbsp;?</strong></p>
 
+<figure class="inline-img">
+  <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=900&q=80" alt="Atelier de maroquinerie" loading="lazy">
+</figure>
+
 <div class="section-break">&bull; &bull; &bull;</div>
 
 <p>J'observe le luxe et la tech depuis vingt ans. Des deux c&ocirc;t&eacute;s de la table.</p>
 
+<div class="clearfix">
+<figure class="inline-img float-right">
+  <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&q=80" alt="Boutique de luxe" loading="lazy">
+</figure>
+
 <p>C&ocirc;t&eacute; maisons, d'abord. Chez Saint Laurent, puis chez LVMH au Bon March&eacute;. Des ann&eacute;es &agrave; comprendre que dans le luxe, la technologie qui fonctionne est celle qui dispara&icirc;t&nbsp;&mdash;&nbsp;ce que Kapferer appelle la <em>Soulful Tech</em>, celle que le client ne voit jamais. Ce que j'appelle la <em>loi du flacon</em>&nbsp;: l'IA qui compte est celle qu'on met dans le produit, pas celle qu'on affiche en vitrine. Shiseido l'a compris avec VOYAGER. Gucci, en publiant des images IA sur Instagram, a d&eacute;couvert l'inverse &agrave; ses d&eacute;pens.</p>
+</div>
+
+<div class="clearfix">
+<figure class="inline-img float-left">
+  <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80" alt="Bureau de direction" loading="lazy">
+</figure>
 
 <p>C&ocirc;t&eacute; agences, ensuite. Treize ans. Mo&euml;t &amp; Chandon, Parfums Givenchy chez Australie. Chanel chez Mazarine&nbsp;&mdash;&nbsp;un compte &agrave; deux millions d'euros o&ugrave; la moindre ligne de brief engageait l'image de la maison. Hennessy, Dior, Clarins, Galeries Lafayette chez WIDE. Et Razorfish en dernier, directeur associ&eacute;, 60&nbsp;millions de CA, o&ugrave; j'ai port&eacute; l'offre IA pour le groupe.</p>
+</div>
 
 <p>Dans chacune de ces missions, la m&ecirc;me question revenait&nbsp;: comment transformer une recommandation strat&eacute;gique en quelque chose que les &eacute;quipes peuvent ex&eacute;cuter lundi matin&nbsp;?</p>
 
@@ -306,7 +378,11 @@ footer .sig-detail {
 
 <p>Entre le rapport inspir&eacute; et le plan d'action op&eacute;rationnel, entre la vision du CMO et les contraintes du DSI, entre &laquo;&nbsp;on devrait faire de l'IA&nbsp;&raquo; et &laquo;&nbsp;voici ce qu'on fait, avec qui, pour combien, d'ici quand, et comment on mesure&nbsp;&raquo;&nbsp;&mdash;&nbsp;il y a un vide. Dans la plupart des groupes, personne n'a le mandat de le combler. C'est ce que j'appelle le <em>dilemme du coffre-fort</em>&nbsp;: la culture qui prot&egrave;ge la valeur d'une maison est la m&ecirc;me qui emp&ecirc;che l'IA d'y op&eacute;rer.</p>
 
-<p><strong>C'est ce vide que je comble.</strong></p>
+<p class="punchline"><strong>C'est ce vide que je comble.</strong></p>
+
+<figure class="inline-img">
+  <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80" alt="Strat&eacute;gie" loading="lazy">
+</figure>
 
 <div class="section-break">&bull; &bull; &bull;</div>
 
