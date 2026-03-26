@@ -70,6 +70,23 @@ main {
 p { margin-bottom: 22px; }
 strong { font-weight: 600; }
 
+/* Punchlines en Inter — les phrases qui doivent accrocher */
+.punchline {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+}
+/* Chapô — paragraphe d'intro en Inter light */
+.chapo {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
 /* SECTION BREAK */
 .section-break {
   text-align: center;
@@ -193,8 +210,10 @@ footer .sig-detail {
   .manifesto-header .baseline { font-size: 17px; }
   p { margin-bottom: 16px; }
   .section-break { padding: 24px 0; }
+  .punchline { font-size: 14px; }
+  .chapo { font-size: 14px; }
   .pull-quote {
-    font-size: 20px;
+    font-size: 16px;
     padding: 20px 12px;
     margin: 16px 0;
   }
@@ -210,9 +229,44 @@ footer .sig-detail {
   footer .sig { font-size: 20px; }
   footer .sig-detail { font-size: 12px; }
 }
+/* ===== ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Punchlines arrive with slight delay */
+.punchline.reveal { transition-delay: 0.1s; }
+
+/* Pull quotes scale subtly */
+.pull-quote.reveal {
+  transform: scale(0.97);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.pull-quote.reveal.visible {
+  transform: scale(1);
+}
+
+/* Progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: var(--accent);
+  width: 0%;
+  z-index: 100;
+  transition: width 0.1s linear;
+}
 </style>
 </head>
 <body>
+<div class="progress-bar" id="progressBar"></div>
 <main>
 
 <header class="manifesto-header">
@@ -220,17 +274,17 @@ footer .sig-detail {
   <h1>Vous savez tout.<br>Sauf quoi faire lundi matin.</h1>
 </header>
 
-<p>Vous lisez les newsletters. Vous allez aux conf&eacute;rences. Vous suivez les bons comptes sur LinkedIn. Vous avez lu le dernier rapport Bain sur l'IA dans le luxe, peut-&ecirc;tre m&ecirc;me celui de McKinsey. Vos &eacute;quipes ne sont pas en reste&nbsp;: le planning strat vous remonte les tendances, la data vous envoie des dashboards, la tech vous alerte sur les nouveaux outils, la cr&eacute;a vous montre ce que fait la concurrence. Votre agence vous a pr&eacute;sent&eacute; un POC. Votre ESN a propos&eacute; un cadrage.</p>
+<p class="chapo">Vous lisez les newsletters. Vous allez aux conf&eacute;rences. Vous suivez les bons comptes sur LinkedIn. Vous avez lu le dernier rapport Bain sur l'IA dans le luxe, peut-&ecirc;tre m&ecirc;me celui de McKinsey. Vos &eacute;quipes ne sont pas en reste&nbsp;: le planning strat vous remonte les tendances, la data vous envoie des dashboards, la tech vous alerte sur les nouveaux outils, la cr&eacute;a vous montre ce que fait la concurrence. Votre agence vous a pr&eacute;sent&eacute; un POC. Votre ESN a propos&eacute; un cadrage.</p>
 
-<p>Vous &ecirc;tes inform&eacute;. De toutes parts. Parfaitement.</p>
+<p class="punchline">Vous &ecirc;tes inform&eacute;. De toutes parts. Parfaitement.</p>
 
-<p>Et pourtant.</p>
+<p class="punchline">Et pourtant.</p>
 
 <p>Le projet IA dont on a parl&eacute; en COMEX en janvier n'a toujours pas d&eacute;marr&eacute;. La recommandation de l'agence est rest&eacute;e sur des slides&nbsp;&mdash;&nbsp;belles slides, d'ailleurs. Le DSI dit qu'il faut &laquo;&nbsp;s&eacute;curiser la donn&eacute;e d'abord&nbsp;&raquo;. Le budget est fl&eacute;ch&eacute;, mais personne ne sait exactement sur quoi. Et pendant ce temps, Kering formalise sa doctrine IA, Burberry publie +24% de panier moyen gr&acirc;ce &agrave; Penguin, The RealReal affiche 42&nbsp;millions de dollars d'EBITDA gr&acirc;ce &agrave; une IA que personne ne voit.</p>
 
 <p>J'ai observ&eacute; cette configuration trop souvent pour croire qu'elle est accidentelle&nbsp;: <strong>le choix technique fait par une DSI &eacute;crit les ambitions des &eacute;quipes m&eacute;tier, pas l'inverse.</strong> Les directeurs marketing finissent par ne pas demander ce que l'IA pourrait faire, mais ce que leur outil sait faire. L'outil contraint le besoin. Le p&eacute;rim&egrave;tre du possible se r&eacute;tr&eacute;cit avant m&ecirc;me d'avoir &eacute;t&eacute; dessin&eacute;.</p>
 
-<p>La question n'est pas &laquo;&nbsp;faut-il faire de l'IA&nbsp;&raquo;. La question est&nbsp;: <strong>qui tient le stylo quand on dessine le p&eacute;rim&egrave;tre du possible&nbsp;?</strong></p>
+<p class="punchline">La question n'est pas &laquo;&nbsp;faut-il faire de l'IA&nbsp;&raquo;. La question est&nbsp;: <strong>qui tient le stylo quand on dessine le p&eacute;rim&egrave;tre du possible&nbsp;?</strong></p>
 
 <div class="section-break">&bull; &bull; &bull;</div>
 
@@ -290,7 +344,7 @@ footer .sig-detail {
 
 <p>Vous allez me dire&nbsp;: &laquo;&nbsp;Nous connaissons notre m&eacute;tier. Nos &eacute;quipes sont comp&eacute;tentes. Nous n'avons pas besoin d'un consultant de plus.&nbsp;&raquo;</p>
 
-<p>Je ne crois pas que ce soit le bon cadre.</p>
+<p class="punchline">Je ne crois pas que ce soit le bon cadre.</p>
 
 <p>87% des maisons du Comit&eacute; Colbert n'ont pas d'IA int&eacute;gr&eacute;e. Ce chiffre est souvent lu comme un retard. Je le lis autrement&nbsp;: les maisons qui ont le plus &agrave; perdre dans une transformation mal conduite sont pr&eacute;cis&eacute;ment celles qui ont b&acirc;ti leur valeur sur des gestes qui ne se d&eacute;l&egrave;guent pas. Ce n'est pas de l'inertie, c'est de la prudence institutionnelle. Mais la prudence a un co&ucirc;t&nbsp;: 90% des projets IA &laquo;&nbsp;transformatifs&nbsp;&raquo; dans le luxe restent bloqu&eacute;s au stade pilote. Les use cases qui passent &agrave; l'&eacute;chelle sont presque tous n&eacute;s d'une cellule isol&eacute;e qui a prouv&eacute; quelque chose sur un p&eacute;rim&egrave;tre restreint avant d'&ecirc;tre absorb&eacute;e. Cr&eacute;er cette cellule, lui donner un mandat clair, et la connecter au COMEX&nbsp;&mdash;&nbsp;c'est exactement ce que je fais.</p>
 
@@ -314,5 +368,32 @@ footer .sig-detail {
 </footer>
 
 </main>
+
+<script>
+// Reveal on scroll
+document.addEventListener('DOMContentLoaded', () => {
+  // Add reveal class to all content elements
+  const els = document.querySelectorAll('main > p, main > .section-break, main > .pull-quote, main > .what-i-do, main > .cta-section, main > footer');
+  els.forEach(el => el.classList.add('reveal'));
+
+  // Header is always visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Progress bar
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = h > 0 ? (window.scrollY / h) * 100 : 0;
+    document.getElementById('progressBar').style.width = pct + '%';
+  });
+});
+</script>
 </body>
 </html>
