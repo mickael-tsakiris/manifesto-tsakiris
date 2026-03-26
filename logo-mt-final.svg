@@ -1,11 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80">
-  <!-- Cercle monogramme -->
   <circle cx="40" cy="40" r="35" fill="none" stroke="#5C483B" stroke-width="1.5"/>
-  <text x="40" y="47" font-family="'Georgia', 'Cormorant Garamond', serif" font-size="26" font-weight="400" fill="#5C483B" text-anchor="middle" letter-spacing="-0.5">MT</text>
-
-  <!-- Nom -->
+  <text x="40" y="44" font-family="Georgia, 'Cormorant Garamond', serif" font-size="26" font-weight="400" fill="#5C483B" text-anchor="middle" dominant-baseline="central" letter-spacing="-0.5">MT</text>
   <text x="95" y="36" font-family="'Helvetica Neue', 'Inter', sans-serif" font-size="16" font-weight="500" fill="#1A1A1A" letter-spacing="0.5">Mickaël Tsakiris</text>
-
-  <!-- Baseline -->
-  <text x="95" y="54" font-family="'Helvetica Neue', 'Inter', sans-serif" font-size="10" font-weight="300" fill="#8A6D5A" letter-spacing="1.2" text-transform="uppercase">TRANSFORMATION IA — LUXE &amp; PREMIUM</text>
+  <text x="95" y="54" font-family="'Helvetica Neue', 'Inter', sans-serif" font-size="10" font-weight="300" fill="#8A6D5A" letter-spacing="1.2">TRANSFORMATION IA — LUXE &amp; PREMIUM</text>
 </svg>
