@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Final — Mickaël Tsakiris</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF8F5;--bg-alt:#F0EEE9;--text:#1A1A1A;--text-sec:#6B6B6B;--accent:#8A6D5A;--accent-dk:#5C483B;--border:#E5DDD3}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;font-size:14px;color:var(--text);background:var(--bg)}
+main{max-width:800px;margin:0 auto;padding:60px 40px 120px}
+h1{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;margin-bottom:8px}
+.sub{font-size:13px;color:var(--text-sec);margin-bottom:48px}
+h2{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-top:48px;margin-bottom:20px;font-weight:500}
+
+.logo-row{display:flex;gap:24px;margin-bottom:24px;flex-wrap:wrap}
+.logo-box{border:1px solid var(--border);border-radius:4px;padding:48px 40px;display:flex;align-items:center;justify-content:center;flex:1;min-width:300px;min-height:140px}
+.logo-box.dark{background:#1A1A1A;border-color:#1A1A1A}
+.logo-box.cream{background:var(--bg-alt)}
+.logo-box.white{background:#FFFFFF}
+
+/* Logo component */
+.logo{display:flex;align-items:center;gap:20px}
+.logo .circle{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--accent-dk);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo .circle .monogram{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--accent-dk);letter-spacing:-0.5px}
+.logo .text .name{font-family:'Inter',sans-serif;font-size:16px;font-weight:500;letter-spacing:.3px;color:var(--text)}
+.logo .text .baseline{font-family:'Inter',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent);margin-top:4px;font-weight:300}
+
+/* Dark variants */
+.dark .logo .circle{border-color:#B8A08E}
+.dark .logo .circle .monogram{color:#B8A08E}
+.dark .logo .text .name{color:#F0EEE9}
+.dark .logo .text .baseline{color:#B8A08E}
+
+/* Small variant */
+.logo.sm .circle{width:44px;height:44px}
+.logo.sm .circle .monogram{font-size:18px}
+.logo.sm .text .name{font-size:13px}
+.logo.sm .text .baseline{font-size:8px;letter-spacing:1px}
+
+/* Monogram only */
+.logo.mono-only{gap:0}
+.logo.mono-only .circle{width:72px;height:72px}
+.logo.mono-only .circle .monogram{font-size:30px}
+
+/* Horizontal compact */
+.logo.compact{gap:12px}
+.logo.compact .circle{width:36px;height:36px}
+.logo.compact .circle .monogram{font-size:15px}
+.logo.compact .text .name{font-size:13px;font-weight:400}
+.logo.compact .text .baseline{font-size:8px;margin-top:2px}
+
+.note{font-size:12px;color:var(--text-sec);margin-top:8px;font-style:italic}
+</style>
+</head>
+<body>
+<main>
+
+<h1>Logo final — Option D</h1>
+<div class="sub">Monogramme MT + nom + baseline. Toutes les déclinaisons.</div>
+
+<!-- PRINCIPAL -->
+<h2>Version principale</h2>
+<div class="logo-row">
+  <div class="logo-box cream">
+    <div class="logo">
+      <div class="circle"><div class="monogram">MT</div></div>
+      <div class="text">
+        <div class="name">Mickaël Tsakiris</div>
+        <div class="baseline">Transformation IA — Luxe & Premium</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUR FOND SOMBRE -->
+<h2>Sur fond sombre</h2>
+<div class="logo-row">
+  <div class="logo-box dark">
+    <div class="logo">
+      <div class="circle"><div class="monogram">MT</div></div>
+      <div class="text">
+        <div class="name">Mickaël Tsakiris</div>
+        <div class="baseline">Transformation IA — Luxe & Premium</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUR BLANC -->
+<h2>Sur fond blanc</h2>
+<div class="logo-row">
+  <div class="logo-box white">
+    <div class="logo">
+      <div class="circle"><div class="monogram">MT</div></div>
+      <div class="text">
+        <div class="name">Mickaël Tsakiris</div>
+        <div class="baseline">Transformation IA — Luxe & Premium</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PETIT FORMAT -->
+<h2>Petit format (header quiz, email signature)</h2>
+<div class="logo-row">
+  <div class="logo-box cream">
+    <div class="logo sm">
+      <div class="circle"><div class="monogram">MT</div></div>
+      <div class="text">
+        <div class="name">Mickaël Tsakiris</div>
+        <div class="baseline">Transformation IA — Luxe & Premium</div>
+      </div>
+    </div>
+  </div>
+  <div class="logo-box dark">
+    <div class="logo sm">
+      <div class="circle"><div class="monogram">MT</div></div>
+      <div class="text">
+        <div class="name">Mickaël Tsakiris</div>
+        <div class="baseline">Transformation IA — Luxe & Premium</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MONOGRAMME SEUL -->
+<h2>Monogramme seul (favicon, avatar, icône)</h2>
+<div class="logo-row">
+  <div class="logo-box cream" style="flex:0;padding:32px">
+    <div class="logo mono-only">
+      <div class="circle"><div class="monogram">MT</div></div>
+    </div>
+  </div>
+  <div class="logo-box dark" style="flex:0;padding:32px">
+    <div class="logo mono-only">
+      <div class="circle"><div class="monogram">MT</div></div>
+    </div>
+  </div>
+  <div class="logo-box white" style="flex:0;padding:32px">
+    <div class="logo mono-only">
+      <div class="circle"><div class="monogram">MT</div></div>
+    </div>
+  </div>
+</div>
+<div class="note">Utilisable en favicon (16x16, 32x32), avatar LinkedIn, icône ScoreApp.</div>
+
+<!-- COMPACT -->
+<h2>Version compacte (barre de navigation, footer)</h2>
+<div class="logo-row">
+  <div class="logo-box cream">
+    <div class="logo compact">
+      <div class="circle"><div class="monogram">MT</div></div>
+      <div class="text">
+        <div class="name">Mickaël Tsakiris</div>
+        <div class="baseline">Transformation IA — Luxe & Premium</div>
+      </div>
+    </div>
+  </div>
+  <div class="logo-box dark">
+    <div class="logo compact">
+      <div class="circle"><div class="monogram">MT</div></div>
+      <div class="text">
+        <div class="name">Mickaël Tsakiris</div>
+        <div class="baseline">Transformation IA — Luxe & Premium</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+</body>
+</html>
