@@ -18,12 +18,17 @@
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 21px;
-  line-height: 1.8;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.85;
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+}
+/* Type pairing : Cormorant Garamond (display/titres/citations) + Inter (corps) */
+h1, h2, h3, .pull-quote, .cta-section .cta-text, footer .sig, .what-i-do li {
+  font-family: 'Cormorant Garamond', Georgia, serif;
 }
 /* LAYOUT — desktop first */
 main {
